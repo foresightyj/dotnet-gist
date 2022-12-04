@@ -3,13 +3,18 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net7.0</TargetFramework>
-    <RootNamespace>get_gist</RootNamespace>
+    <RootNamespace>gist</RootNamespace>
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>gist</ToolCommandName>
+    <PackageOutputPath>./nupkg</PackageOutputPath>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Program.fs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Octokit" Version="4.0.3" />
+    <PackageReference Include="Sharprompt" Version="2.4.5" />
+    <PackageReference Include="System.CommandLine" Version="2.0.0-beta4.22272.1" />
     <PackageReference Include="TextCopy" Version="6.2.0" />
   </ItemGroup>
 </Project>
