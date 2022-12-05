@@ -84,7 +84,6 @@ let renameGistAsync () : Task =
         ()
     }
 
-
 let getSubCommand =
     let urlOption = Option<string>("--url", "gist full url")
     urlOption.IsRequired <- true
@@ -108,6 +107,7 @@ let renameSubCommand =
     rename.SetHandler(renameGistAsync)
     rename
 
+
 [<EntryPoint>]
 let main args =
     // [How to define commands in System.CommandLine | Microsoft Learn]( https://learn.microsoft.com/en-us/dotnet/standard/commandline/define-commands )
@@ -116,6 +116,8 @@ let main args =
     root.Add(listSubCommand)
     root.Add(deleteSubCommand)
     root.Add(renameSubCommand)
+
+    Prompt.ColorSchema.Select <- ConsoleColor.Magenta
 
     async {
         let t = root.InvokeAsync(args) |> Async.AwaitTask
