@@ -9,6 +9,7 @@
     <PackageOutputPath>./nupkg</PackageOutputPath>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Utils.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
   <ItemGroup>
