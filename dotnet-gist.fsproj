@@ -7,6 +7,9 @@
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>gist</ToolCommandName>
     <PackageOutputPath>./nupkg</PackageOutputPath>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.0</Version>
+    <Authors>foresightyj</Authors>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Utils.fs" />
